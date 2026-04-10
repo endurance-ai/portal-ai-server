@@ -1,0 +1,13 @@
+model_list:
+  - model_name: "gpt-4o-mini"
+    litellm_params:
+      model: "openai/gpt-4o-mini"
+      api_key: "os.environ/OPENAI_API_KEY"
+
+  - model_name: "embedding"
+    litellm_params:
+      model: "cohere/embed-v4"
+      api_key: "os.environ/COHERE_API_KEY"
+
+general_settings:
+  master_key: "os.environ/LITELLM_MASTER_KEY"
