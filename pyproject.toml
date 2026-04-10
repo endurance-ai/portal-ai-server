@@ -1,0 +1,32 @@
+[project]
+name = "portal-ai-server"
+version = "0.1.0"
+description = "Portal.ai AI Server — FastAPI 기반 패션 추천 검색/리파인 파이프라인"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "litellm>=1.60",
+    "qdrant-client>=1.17",
+    "pydantic>=2.10",
+    "httpx>=0.28",
+    "orjson>=3.10",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.25",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
